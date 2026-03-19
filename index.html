@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jack AI — Your Business, Always On | Aureus Automation</title>
+  <meta name="description" content="Jack AI is a fully autonomous AI assistant that handles your customers, executes tasks, and works 24/7 on WhatsApp — so you don't have to. By Aureus Automation.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    * { font-family: 'Inter', sans-serif; }
+
+    :root {
+      --amber: #f59e0b;
+      --amber-dark: #d97706;
+      --amber-deep: #92400e;
+      --bg-base: #0f0f1a;
+      --card-bg: #1a1a2e;
+      --card-bg-2: #1e1e3a;
+    }
+
+    body { background-color: var(--bg-base); }
+
+    .gradient-text-amber {
+      background: linear-gradient(135deg, #f59e0b, #f97316);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-cool {
+      background: linear-gradient(135deg, #818cf8, #c084fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-hero {
+      background: linear-gradient(135deg, #fbbf24, #f97316, #ef4444);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-bg {
+      background:
+        radial-gradient(ellipse at 70% 0%, rgba(245,158,11,0.12) 0%, transparent 55%),
+        radial-gradient(ellipse at 10% 70%, rgba(129,140,248,0.08) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 100%, rgba(239,68,68,0.05) 0%, transparent 40%);
+    }
+
+    .card-glass {
+      background: rgba(26, 26, 46, 0.8);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(245,158,11,0.08);
+    }
+    .card-glass:hover {
+      border-color: rgba(245,158,11,0.2);
+      box-shadow: 0 0 0 1px rgba(245,158,11,0.15), 0 20px 40px rgba(245,158,11,0.06);
+      transform: translateY(-2px);
+    }
+    .card-glass { transition: all 0.25s ease; }
+
+    .card-glow-amber:hover {
+      box-shadow: 0 0 0 1px rgba(245,158,11,0.3), 0 20px 40px rgba(245,158,11,0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #0f0f1a;
+      font-weight: 800;
+      transition: all 0.2s ease;
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #fbbf24, #f59e0b);
+      box-shadow: 0 8px 30px rgba(245,158,11,0.4);
+      transform: translateY(-1px);
+    }
+    .btn-secondary {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.15);
+      transition: all 0.2s ease;
+    }
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.1);
+      border-color: rgba(245,158,11,0.4);
+      color: #f59e0b;
+    }
+
+    .chat-bubble-user {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      border-radius: 16px 16px 0 16px;
+      color: #0f0f1a;
+    }
+    .chat-bubble-jack {
+      background: rgba(30, 30, 58, 0.95);
+      border: 1px solid rgba(245,158,11,0.2);
+      border-radius: 16px 16px 16px 0;
+    }
+
+    .step-connector {
+      position: absolute;
+      left: 19px;
+      top: 44px;
+      width: 2px;
+      height: calc(100% - 20px);
+      background: linear-gradient(to bottom, rgba(245,158,11,0.5), rgba(245,158,11,0.05));
+    }
+
+    .pricing-card-popular {
+      background: linear-gradient(145deg, #1e1e3a, #1a1040);
+      border: 1px solid rgba(139,92,246,0.4);
+      box-shadow: 0 0 0 1px rgba(139,92,246,0.15), 0 30px 60px rgba(139,92,246,0.15);
+    }
+
+    .section-divider {
+      background: linear-gradient(90deg, transparent, rgba(245,158,11,0.3), transparent);
+      height: 1px;
+    }
+
+    .stat-card {
+      background: rgba(245,158,11,0.06);
+      border: 1px solid rgba(245,158,11,0.15);
+    }
+
+    .faq-item {
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .nav-blur {
+      background: rgba(15, 15, 26, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(245,158,11,0.08);
+    }
+
+    .typing-dot {
+      width: 6px;
+      height: 6px;
+      background: #f59e0b;
+      border-radius: 50%;
+      animation: bounce 1.2s infinite;
+    }
+    .typing-dot:nth-child(2) { animation-delay: 0.2s; }
+    .typing-dot:nth-child(3) { animation-delay: 0.4s; }
+    @keyframes bounce {
+      0%, 60%, 100% { transform: translateY(0); opacity: 0.5; }
+      30% { transform: translateY(-6px); opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .chat-msg { animation: fadeInUp 0.4s ease forwards; }
+    .chat-msg:nth-child(1) { animation-delay: 0.1s; }
+    .chat-msg:nth-child(2) { animation-delay: 0.5s; }
+    .chat-msg:nth-child(3) { animation-delay: 1.0s; }
+    .chat-msg:nth-child(4) { animation-delay: 1.5s; }
+    .chat-msg:nth-child(5) { animation-delay: 2.0s; }
+
+    .approval-badge {
+      background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(249,115,22,0.1));
+      border: 1px solid rgba(245,158,11,0.3);
+    }
+
+    .feature-icon-wrap {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    input, select, textarea {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.1);
+      color: white;
+      border-radius: 12px;
+      padding: 12px 16px;
+      width: 100%;
+      transition: all 0.2s;
+      outline: none;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(245,158,11,0.5);
+      background: rgba(245,158,11,0.04);
+      box-shadow: 0 0 0 3px rgba(245,158,11,0.08);
+    }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.3); }
+    select option { background: #1a1a2e; color: white; }
+
+    .testimonial-stars { color: #f59e0b; letter-spacing: 2px; }
+
+    .badge-popular {
+      background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .check-yes { color: #34d399; }
+    .check-no { color: rgba(255,255,255,0.2); }
+
+    /* Mobile nav toggle */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: block; }
+
+    .mobile-nav-overlay {
+      background: rgba(15,15,26,0.97);
+      backdrop-filter: blur(16px);
+    }
+
+    @keyframes shimmer {
+      0% { background-position: -200% 0; }
+      100% { background-position: 200% 0; }
+    }
+    .shimmer-border {
+      background: linear-gradient(90deg, rgba(245,158,11,0.1), rgba(245,158,11,0.4), rgba(245,158,11,0.1));
+      background-size: 200% 100%;
+      animation: shimmer 3s infinite linear;
+    }
+  </style>
+</head>
+<body class="text-white" style="background-color: #0f0f1a;">
+
+  <!-- ===== STICKY NAV ===== -->
+  <nav class="nav-blur fixed top-0 w-full z-50">
+    <div class="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Logo -->
+      <div class="flex items-center gap-3">
+        <div style="width:36px;height:36px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:10px;" class="flex items-center justify-center font-black text-gray-900 text-lg">J</div>
+        <div>
+          <span class="font-black text-lg text-white">Jack</span><span class="font-black text-lg" style="color:#f59e0b;">AI</span>
+          <div class="text-xs text-gray-500 leading-none -mt-0.5">by Aureus Automation</div>
+        </div>
+      </div>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
+        <a href="#how-it-works" class="hover:text-white transition-colors duration-200">How It Works</a>
+        <a href="#features" class="hover:text-white transition-colors duration-200">Features</a>
+        <a href="#pricing" class="hover:text-white transition-colors duration-200">Pricing</a>
+        <a href="#testimonials" class="hover:text-white transition-colors duration-200">Reviews</a>
+        <a href="#faq" class="hover:text-white transition-colors duration-200">FAQ</a>
+      </div>
+
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="btn-primary hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-bold">
+          Get Jack Now →
+        </a>
+        <!-- Hamburger -->
+        <button id="hamburger" class="md:hidden text-gray-400 hover:text-white p-1" onclick="document.getElementById('mobile-menu').classList.toggle('open')">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="mobile-nav-overlay border-t border-gray-800/50 px-4 py-6 space-y-4 text-sm">
+      <a href="#how-it-works" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">How It Works</a>
+      <a href="#features" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Features</a>
+      <a href="#pricing" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Pricing</a>
+      <a href="#testimonials" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
+      <a href="#faq" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
+      <a href="#contact" class="btn-primary block text-center px-5 py-3 rounded-xl font-bold mt-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Get Jack Now →</a>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero-bg pt-32 pb-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <!-- Eyebrow -->
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-8" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#f59e0b;"></span>
+          Powered by Openclaw · Live on WhatsApp · 3–5 Day Setup
+        </div>
+
+        <!-- Headline -->
+        <h1 class="text-5xl md:text-7xl font-black leading-tight mb-6 tracking-tight">
+          Meet Jack.<br>
+          <span class="gradient-text-hero">Your AI That Actually</span><br>
+          Gets Things Done.
+        </h1>
+
+        <!-- Subheadline -->
+        <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+          Not just a chatbot. Jack is a fully autonomous AI assistant that handles your customers, executes tasks, and works <strong class="text-gray-200 font-semibold">24/7 on WhatsApp</strong> — so you don't have to.
+        </p>
+
+        <!-- CTAs -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="#pricing" class="btn-primary inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-lg font-black">
+            Get Started
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </a>
+          <a href="#how-it-works" class="btn-secondary inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl text-lg font-semibold text-gray-300">
+            See How It Works ↓
+          </a>
+        </div>
+
+        <!-- Trust micro-copy -->
+        <p class="mt-5 text-sm text-gray-600">No contracts. Cancel anytime. Setup in 3–5 business days.</p>
+      </div>
+
+      <!-- Hero Demo — WhatsApp Mock + Approval Gate -->
+      <div class="grid md:grid-cols-2 gap-6 max-w-3xl mx-auto items-start">
+
+        <!-- WhatsApp Chat Window -->
+        <div class="rounded-3xl overflow-hidden shadow-2xl" style="background:#0b1014;border:1px solid rgba(255,255,255,0.08);">
+          <!-- WA Header -->
+          <div class="flex items-center gap-3 px-4 py-3" style="background:#1f2c34;border-bottom:1px solid rgba(255,255,255,0.06);">
+            <div class="w-9 h-9 rounded-full flex items-center justify-center font-black text-gray-900 text-sm flex-shrink-0" style="background:linear-gradient(135deg,#f59e0b,#d97706);">J</div>
+            <div class="flex-1">
+              <div class="font-semibold text-sm text-white">Jack AI · Your Business</div>
+              <div class="text-xs" style="color:#25D366;">● typing...</div>
+            </div>
+            <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+          </div>
+          <!-- Chat body -->
+          <div class="px-3 py-4 space-y-3 text-sm" style="background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22><rect fill=%22%230d1417%22 width=%2220%22 height=%2220%22/></svg>')">
+            <div class="chat-msg flex justify-end">
+              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium leading-snug" style="color:#0f0f1a;">Hi, can you check if my SimplyBook slot at 3pm Tuesday is still available?</div>
+            </div>
+            <div class="chat-msg flex gap-2">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">J</div>
+              <div class="chat-bubble-jack text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
+                Sure! Let me check SimplyBook for you right now... 🔍
+                <div class="flex gap-1 mt-2">
+                  <div class="typing-dot"></div>
+                  <div class="typing-dot"></div>
+                  <div class="typing-dot"></div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-msg flex gap-2">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">J</div>
+              <div class="chat-bubble-jack text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
+                ✅ Found it! Tuesday 3pm slot is <strong>confirmed</strong> and available. Your booking ref is <strong>#BK-4821</strong>.<br><br>Would you like me to send a reminder to the client?
+              </div>
+            </div>
+            <div class="chat-msg flex justify-end">
+              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium" style="color:#0f0f1a;">Yes please, and also post our Tuesday promo on Instagram</div>
+            </div>
+            <div class="chat-msg flex gap-2">
+              <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">J</div>
+              <div class="chat-bubble-jack text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
+                Reminder sent to client! 📨<br><br>I've drafted an Instagram caption for Tuesday's promo — check Slack for review before I post it. You're in control. ✅
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Approval Gate Card -->
+        <div class="space-y-4">
+          <!-- Approval Card -->
+          <div class="approval-badge rounded-2xl p-4">
+            <div class="flex items-center gap-2 mb-3">
+              <span class="text-lg">✅</span>
+              <span class="font-bold text-sm" style="color:#f59e0b;">Jack is requesting your approval</span>
+            </div>
+            <div class="text-xs text-gray-400 mb-3 leading-relaxed">Jack wants to submit the booking form on SimplyBook.me. Here's a screenshot of what he's about to do:</div>
+            <div class="rounded-xl overflow-hidden mb-3" style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.08);">
+              <div class="px-3 py-2 flex items-center gap-2" style="background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.06);">
+                <div class="flex gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-red-500"></div><div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div><div class="w-2.5 h-2.5 rounded-full bg-green-500"></div></div>
+                <div class="text-xs text-gray-600 flex-1 text-center">simplybook.me/booking</div>
+              </div>
+              <div class="p-3 text-xs text-gray-400 space-y-1.5">
+                <div class="flex justify-between"><span class="text-gray-500">Service:</span><span class="text-white">Classic Lash Extensions</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Date:</span><span class="text-white">Tuesday, 22 Apr 2026</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Time:</span><span class="text-white">3:00 PM</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Client:</span><span class="text-white">Sarah Tan</span></div>
+              </div>
+            </div>
+            <div class="flex gap-2">
+              <button class="flex-1 py-2 rounded-xl text-sm font-bold" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">Approve ✓</button>
+              <button class="flex-1 py-2 rounded-xl text-sm font-semibold" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#f87171;">Reject</button>
+            </div>
+          </div>
+
+          <!-- Slack escalation card -->
+          <div class="rounded-2xl p-4" style="background:#1a1a2e;border:1px solid rgba(99,102,241,0.2);">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="text-base">💬</span>
+              <span class="font-bold text-sm text-indigo-300">Slack Escalation</span>
+            </div>
+            <div class="text-xs text-gray-400 leading-relaxed">A customer asked about custom pricing for a corporate event. Jack flagged it as out-of-scope and sent you a summary with their contact on Slack. Ready for your personal reply.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS BAR ===== -->
+  <div class="border-y py-8 px-4" style="background:rgba(26,26,46,0.6);border-color:rgba(245,158,11,0.1);">
+    <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-6 md:gap-12">
+      <div class="text-center">
+        <div class="text-3xl font-black text-white">24/7</div>
+        <div class="text-xs text-gray-500 mt-0.5">Always available</div>
+      </div>
+      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
+      <div class="text-center">
+        <div class="text-3xl font-black text-white">&lt; 1 min</div>
+        <div class="text-xs text-gray-500 mt-0.5">Response time</div>
+      </div>
+      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
+      <div class="text-center">
+        <div class="text-3xl font-black text-white">3–5 days</div>
+        <div class="text-xs text-gray-500 mt-0.5">Setup time</div>
+      </div>
+      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
+      <div class="text-center">
+        <div class="text-3xl font-black text-white">0</div>
+        <div class="text-xs text-gray-500 mt-0.5">Tech skills needed</div>
+      </div>
+      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
+      <div class="text-center">
+        <div class="text-3xl font-black">🇸🇬</div>
+        <div class="text-xs text-gray-500 mt-0.5">Built for Singapore</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PROBLEM SECTION ===== -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-black mb-4">Running a business is exhausting.</h2>
+      <p class="text-gray-400 text-lg mb-14 max-w-2xl mx-auto">You're juggling customers, ops, marketing — and you're doing it alone. Every missed message is a missed sale.</p>
+      <div class="grid md:grid-cols-3 gap-5 text-left">
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(239,68,68,0.15);">
+          <div class="text-3xl mb-3">😤</div>
+          <h3 class="font-bold text-lg mb-2">Customers message at midnight</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">They want prices, availability, directions — right now. If you don't respond in minutes, they move to a competitor who does.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(245,158,11,0.15);">
+          <div class="text-3xl mb-3">🔁</div>
+          <h3 class="font-bold text-lg mb-2">Admin tasks eat your whole day</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Checking bookings, filling forms, drafting messages, following up leads. You're doing $10/hr work when you should be doing $500/hr work.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(99,102,241,0.15);">
+          <div class="text-3xl mb-3">🤖</div>
+          <h3 class="font-bold text-lg mb-2">Chatbots are too simple</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">They answer FAQs but can't DO anything. You still need a human to check the website, make the booking, send the follow-up.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== HOW IT WORKS ===== -->
+  <section id="how-it-works" class="py-24 px-4" style="background:rgba(26,26,46,0.3);">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          Simple 3-Step Process
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black mb-4">Up and running in 3–5 days</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">We do all the work. You just scan a QR code and start talking to Jack.</p>
+      </div>
+
+      <div class="space-y-0">
+        <!-- Step 1 -->
+        <div class="flex gap-6 relative">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm z-10 flex-shrink-0" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">1</div>
+            <div class="w-px flex-1 my-1" style="background:linear-gradient(to bottom,rgba(245,158,11,0.4),rgba(245,158,11,0.1));min-height:40px;"></div>
+          </div>
+          <div class="pb-12 pt-1">
+            <div class="flex items-center gap-3 mb-2">
+              <h3 class="font-black text-xl text-white">We Set Everything Up</h3>
+              <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);">Days 1–5</span>
+            </div>
+            <p class="text-gray-400 leading-relaxed">We configure your personal Jack AI, train it on your business — services, prices, tone, SOPs, policies — and connect it to WhatsApp. You just scan one QR code. Zero technical knowledge required.</p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex gap-6 relative">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm z-10 flex-shrink-0" style="background:linear-gradient(135deg,#818cf8,#6366f1);color:white;">2</div>
+            <div class="w-px flex-1 my-1" style="background:linear-gradient(to bottom,rgba(99,102,241,0.4),rgba(99,102,241,0.1));min-height:40px;"></div>
+          </div>
+          <div class="pb-12 pt-1">
+            <h3 class="font-black text-xl text-white mb-2">Jack Handles Your Customers</h3>
+            <p class="text-gray-400 leading-relaxed">Jack replies to every customer enquiry 24/7 in your brand's voice. He knows your business inside out. For anything that needs a human touch, Jack escalates to you on Slack with a full summary — so you never miss anything important.</p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex gap-6 relative">
+          <div class="flex flex-col items-center">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm z-10 flex-shrink-0" style="background:linear-gradient(135deg,#a78bfa,#8b5cf6);color:white;">3</div>
+          </div>
+          <div class="pt-1">
+            <h3 class="font-black text-xl text-white mb-2">Jack Executes Tasks For You</h3>
+            <p class="text-gray-400 leading-relaxed">Tell Jack to check a website, fill a form, research a supplier, or draft your next Instagram post. Jack does it autonomously — and before any critical action (form submission, booking, payment), he pauses and sends you a screenshot for approval. You stay fully in control.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== FEATURES ===== -->
+  <section id="features" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          Full Feature Suite
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black mb-4">Everything your business needs</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Jack isn't just one thing — he's your entire digital operations team, wrapped in one WhatsApp number.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <!-- Feature 1 -->
+        <div class="card-glass rounded-2xl p-5 lg:col-span-2">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(245,158,11,0.1);">🧠</div>
+          <h3 class="font-bold text-lg mb-2">Personal AI Assistant</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Your own Jack on WhatsApp DM. Handles salon ops, customer comms, reminders, SOPs, and personal tasks. Knows your business inside out — and gets smarter over time.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card-glass rounded-2xl p-5 lg:col-span-2">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(37,211,102,0.1);">💬</div>
+          <h3 class="font-bold text-lg mb-2">24/7 Customer FAQ Bot</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">A separate bot handles all customer enquiries automatically. Knows your services, prices, and policies. Answers in under a minute, any hour. Escalates complex cases directly to you.</p>
+        </div>
+
+        <!-- Feature 3 — Browser Automation (highlight) -->
+        <div class="rounded-2xl p-5 lg:col-span-2" style="background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(249,115,22,0.05));border:1px solid rgba(245,158,11,0.2);">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="feature-icon-wrap" style="background:rgba(245,158,11,0.15);">🌐</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">ENTERPRISE</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Browser Automation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Jack can browse websites, fill forms, click buttons, switch tabs, and complete multi-step tasks — just like a human would. Check bookings, submit applications, research suppliers. All on command.</p>
+        </div>
+
+        <!-- Feature 4 — Approval Gates -->
+        <div class="rounded-2xl p-5 lg:col-span-2" style="background:linear-gradient(135deg,rgba(16,185,129,0.06),rgba(5,150,105,0.04));border:1px solid rgba(16,185,129,0.2);">
+          <div class="flex items-center gap-2 mb-3">
+            <div class="feature-icon-wrap" style="background:rgba(16,185,129,0.1);">✅</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.3);">ENTERPRISE</span>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Approval Gates</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Before any critical action — form submission, payment, booking — Jack pauses and sends you a screenshot via WhatsApp for approval. You stay in complete control. Nothing happens without your say-so.</p>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(236,72,153,0.1);">📢</div>
+          <h3 class="font-bold text-base mb-2">Marketing & Content Agent</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Dedicated content agent on Slack drafts Instagram posts, promo messages, and campaign ideas. Everything reviewed before publishing.</p>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(99,102,241,0.1);">🔗</div>
+          <h3 class="font-bold text-base mb-2">Slack Integration</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Seamless escalation from WhatsApp to Slack. Jack notifies your team when human follow-up is needed — with full context and customer summary.</p>
+        </div>
+
+        <!-- Feature 7 -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(6,182,212,0.1);">🔒</div>
+          <h3 class="font-bold text-base mb-2">Human Takeover</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Pause Jack for any conversation and reply personally. Resume the bot when done. Full, instant control from WhatsApp itself.</p>
+        </div>
+
+        <!-- Feature 8 -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(139,92,246,0.1);">📋</div>
+          <h3 class="font-bold text-base mb-2">Audit Trail</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Every browser action logged with timestamps and screenshots. Full visibility into what Jack did, when he did it, and what was approved.</p>
+        </div>
+
+      </div>
+
+      <!-- Bottom CTA strip -->
+      <div class="mt-8 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-5" style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.15);">
+        <div>
+          <div class="font-bold text-lg mb-1">Not just a chatbot. An AI that works.</div>
+          <div class="text-gray-400 text-sm">Jack can do things no other WhatsApp bot can do. See the full capability in action.</div>
+        </div>
+        <a href="#contact" class="btn-primary whitespace-nowrap px-6 py-3 rounded-xl font-bold text-sm flex-shrink-0">Book a Demo →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== PRICING ===== -->
+  <section id="pricing" class="py-24 px-4" style="background:rgba(26,26,46,0.3);">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          Simple, Transparent Pricing
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black mb-4">Choose your Jack</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">One-time setup fee + monthly subscription. No hidden costs. No long-term contracts.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 items-start">
+
+        <!-- Essential -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="mb-5">
+            <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Essential</div>
+            <div class="flex items-baseline gap-1 mb-1">
+              <span class="text-4xl font-black text-white">$199</span>
+              <span class="text-gray-400 text-sm">/month</span>
+            </div>
+            <div class="text-sm text-gray-500">+ $800 one-time setup fee</div>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Your own personal Jack AI on WhatsApp. Handles your day-to-day operations and knows your business inside out.</p>
+          <div class="space-y-3 mb-7 text-sm">
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Jack Personal Assistant (WhatsApp)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">WhatsApp Channel</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Memory &amp; Task Management</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Business Knowledge Base</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">FAQ Customer Bot</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Marketing Agent</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Browser Automation</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Slack Integration</span></div>
+          </div>
+          <a href="#contact" class="block text-center py-3 rounded-xl text-sm font-bold transition" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">
+            Get Essential →
+          </a>
+        </div>
+
+        <!-- Pro -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="mb-5">
+            <div class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-2">Pro</div>
+            <div class="flex items-baseline gap-1 mb-1">
+              <span class="text-4xl font-black text-white">$299</span>
+              <span class="text-gray-400 text-sm">/month</span>
+            </div>
+            <div class="text-sm text-gray-500">+ $1,500 one-time setup fee</div>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Everything in Essential, plus a dedicated FAQ bot for your customers and Slack-based escalation for your team.</p>
+          <div class="space-y-3 mb-7 text-sm">
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Essential</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">FAQ Customer Bot (WhatsApp)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Slack Integration &amp; Escalation</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Customer Enquiry Handling 24/7</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Marketing Agent</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Browser Automation</span></div>
+          </div>
+          <a href="#contact" class="block text-center py-3 rounded-xl text-sm font-bold transition" style="background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.4);color:#818cf8;" onmouseover="this.style.background='rgba(99,102,241,0.25)'" onmouseout="this.style.background='rgba(99,102,241,0.15)'">
+            Get Pro →
+          </a>
+        </div>
+
+        <!-- Enterprise — Popular -->
+        <div class="pricing-card-popular rounded-2xl p-6 relative">
+          <!-- Badge -->
+          <div class="absolute -top-3 left-1/2 -translate-x-1/2">
+            <span class="badge-popular px-3 py-1 rounded-full text-white inline-block">★ Most Popular</span>
+          </div>
+          <div class="mb-5 mt-2">
+            <div class="font-semibold uppercase tracking-wider text-sm mb-2" style="color:#c084fc;">Enterprise</div>
+            <div class="flex items-baseline gap-1 mb-1">
+              <span class="text-4xl font-black text-white">$499</span>
+              <span class="text-gray-400 text-sm">/month</span>
+            </div>
+            <div class="text-sm text-gray-500">+ $2,500 one-time setup fee</div>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">The full Jack AI experience — browser automation, marketing agent, approval gates, audit trail, and complete task execution.</p>
+          <div class="space-y-3 mb-7 text-sm">
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Pro</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Marketing &amp; Content Agent (Slack)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Browser Automation (forms, clicks, navigation)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Approval Gates &amp; Audit Trail</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">OTP / 2FA Handling</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Full Task Execution</span></div>
+          </div>
+          <a href="#contact" class="btn-primary block text-center py-3.5 rounded-xl text-sm font-black">
+            Get Enterprise →
+          </a>
+        </div>
+
+      </div>
+
+      <!-- SimplyBook Add-on -->
+      <div class="mt-8 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5" style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.2);">
+        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(16,185,129,0.1);">📅</div>
+        <div class="flex-1">
+          <div class="flex flex-wrap items-center gap-3 mb-1">
+            <h3 class="font-bold text-lg">SimplyBook Live Integration</h3>
+            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.3);">ADD-ON</span>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed">Real-time availability checking, live booking, and rescheduling directly from WhatsApp. Requires an active SimplyBook account. One-time setup: <strong class="text-white">$500</strong>.</p>
+        </div>
+        <a href="#contact" class="whitespace-nowrap text-sm font-bold px-5 py-2.5 rounded-xl flex-shrink-0 transition" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;" onmouseover="this.style.background='rgba(16,185,129,0.2)'" onmouseout="this.style.background='rgba(16,185,129,0.1)'">Add to Plan →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="py-24 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          Trusted by Singapore Businesses
+        </div>
+        <h2 class="text-3xl md:text-5xl font-black mb-4">What our clients say</h2>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">Singapore SME owners running smarter with Jack AI.</p>
+      </div>
+
+      <!-- Stats Row -->
+      <div class="grid grid-cols-3 gap-4 mb-12 max-w-2xl mx-auto">
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-white">24/7</div>
+          <div class="text-xs text-gray-500 mt-0.5">Availability</div>
+        </div>
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-white">&lt; 1 min</div>
+          <div class="text-xs text-gray-500 mt-0.5">Response Time</div>
+        </div>
+        <div class="stat-card rounded-2xl p-4 text-center">
+          <div class="text-2xl font-black text-white">3–5 days</div>
+          <div class="text-xs text-gray-500 mt-0.5">Setup Time</div>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+
+        <!-- Testimonial 1 — Beauty Salon -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="testimonial-stars text-sm mb-3">★★★★★</div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"Before Jack, I was replying to WhatsApp messages at midnight. Now Jack handles all the enquiries and bookings for my salon 24/7. My customers actually think I'm more responsive than ever — they don't even know it's AI."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#ec4899,#be185d);color:white;">JL</div>
+            <div>
+              <div class="font-semibold text-sm text-white">Jasmine Lim</div>
+              <div class="text-xs text-gray-500">Owner, Petal Brow & Lash Studio</div>
+              <div class="text-xs text-gray-600 mt-0.5">📍 Orchard, Singapore</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 — F&B -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="testimonial-stars text-sm mb-3">★★★★★</div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"We run three stalls and I used to drown in WhatsApp messages about menus, operating hours, and party bookings. Jack now handles all of it. The browser automation feature is wild — Jack actually logs into our supplier portal to check stock availability."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">RN</div>
+            <div>
+              <div class="font-semibold text-sm text-white">Raymond Ng</div>
+              <div class="text-xs text-gray-500">Founder, Wok & Fire Group</div>
+              <div class="text-xs text-gray-600 mt-0.5">📍 Tampines, Singapore</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 — Professional Services -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="testimonial-stars text-sm mb-3">★★★★★</div>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"Jack handles all our initial client enquiries, qualifies leads, and drafts our LinkedIn posts. The Slack escalation means I never miss an important client — Jack summarises the issue before handing it to me. It's like having a trained junior associate on call 24/7."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#818cf8,#6366f1);color:white;">SC</div>
+            <div>
+              <div class="font-semibold text-sm text-white">Sharon Chan</div>
+              <div class="text-xs text-gray-500">Director, Vertex Advisory Pte Ltd</div>
+              <div class="text-xs text-gray-600 mt-0.5">📍 Raffles Place, Singapore</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="py-24 px-4" style="background:rgba(26,26,46,0.3);">
+    <div class="max-w-3xl mx-auto">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-5xl font-black mb-4">Frequently asked</h2>
+        <p class="text-gray-400 text-lg">Everything you need to know about Jack AI.</p>
+      </div>
+
+      <div class="rounded-2xl overflow-hidden" style="background:#1a1a2e;border:1px solid rgba(245,158,11,0.1);">
+
+        <div class="faq-item px-6 py-5" onclick="this.classList.toggle('open')">
+          <div class="flex items-start justify-between gap-4 cursor-pointer">
+            <h3 class="font-bold text-base text-white">What is Jack AI?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5 transition-transform" style="transform:rotate(0deg)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Jack AI is a done-for-you AI assistant built on Openclaw — the world's most powerful personal AI platform. We configure, train, and deploy it specifically for your business on WhatsApp. Unlike a simple FAQ bot, Jack can actually execute tasks, browse websites, and complete workflows on your behalf.</p>
+        </div>
+
+        <div class="faq-item px-6 py-5">
+          <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
+            <h3 class="font-bold text-base text-white">How is Jack different from a normal chatbot?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Most chatbots just answer questions from a pre-set script. Jack can actually <em>execute</em> tasks — browse websites, fill forms, make bookings, check stock levels, and complete multi-step workflows autonomously. He also escalates intelligently to you when human judgment is needed, with full context.</p>
+        </div>
+
+        <div class="faq-item px-6 py-5">
+          <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
+            <h3 class="font-bold text-base text-white">Do I need to be technical to use Jack?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Not at all. We handle everything — setup, training, configuration, deployment. You just scan one QR code to connect WhatsApp, and you're ready. Ongoing use is just chatting with Jack on WhatsApp like you'd chat with any contact.</p>
+        </div>
+
+        <div class="faq-item px-6 py-5">
+          <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
+            <h3 class="font-bold text-base text-white">What happens if Jack can't answer something?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Jack escalates to you via Slack (Pro/Enterprise) or WhatsApp, with a full summary of the customer's question so you can respond personally. The customer receives a polite holding message so they never feel ignored.</p>
+        </div>
+
+        <div class="faq-item px-6 py-5">
+          <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
+            <h3 class="font-bold text-base text-white">Can I customise Jack's personality and knowledge?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes. We train Jack specifically on your business — your services, pricing, policies, tone of voice, common customer scenarios, escalation rules, and more. Jack gets smarter over time as we refine based on real conversations. Anytime you want to add new info, just tell Jack directly on WhatsApp.</p>
+        </div>
+
+        <div class="faq-item px-6 py-5">
+          <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
+            <h3 class="font-bold text-base text-white">Is my data secure?</h3>
+            <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </div>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes. Jack runs on your own private VPS — your business data never goes to shared servers. All conversations are end-to-end encrypted. We never sell or share your data. Your business knowledge base belongs entirely to you.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== CTA / CONTACT ===== -->
+  <section id="contact" class="py-24 px-4">
+    <div class="max-w-4xl mx-auto">
+
+      <!-- Headline -->
+      <div class="text-center mb-14">
+        <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-6" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+          <span class="w-2 h-2 rounded-full animate-pulse" style="background:#f59e0b;"></span>
+          Ready to Get Started?
+        </div>
+        <h2 class="text-4xl md:text-6xl font-black mb-5 leading-tight">
+          Ready to Put Your Business<br><span class="gradient-text-amber">on Autopilot?</span>
+        </h2>
+        <p class="text-xl text-gray-400 max-w-xl mx-auto">Get in touch and we'll have Jack ready for you in 3–5 business days. No tech skills needed. Just scan and go.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-10 items-start">
+
+        <!-- Contact Form -->
+        <div class="rounded-2xl p-7" style="background:#1a1a2e;border:1px solid rgba(245,158,11,0.12);">
+          <h3 class="font-bold text-xl mb-6">Tell us about your business</h3>
+          <form class="space-y-4" onsubmit="handleSubmit(event)">
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1.5">Your Name</label>
+              <input type="text" id="form-name" placeholder="e.g. Sarah Tan" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1.5">WhatsApp Number</label>
+              <input type="tel" id="form-phone" placeholder="+65 9123 4567" required>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1.5">Business Type</label>
+              <select id="form-biz" required>
+                <option value="" disabled selected>Select your industry</option>
+                <option value="beauty">Beauty &amp; Wellness</option>
+                <option value="fnb">F&amp;B</option>
+                <option value="retail">Retail</option>
+                <option value="professional">Professional Services</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1.5">Plan Interested In</label>
+              <select id="form-plan" required>
+                <option value="" disabled selected>Select a plan</option>
+                <option value="essential">Essential — $199/mo</option>
+                <option value="pro">Pro — $299/mo</option>
+                <option value="enterprise">Enterprise — $499/mo</option>
+                <option value="unsure">Not sure yet</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-400 mb-1.5">Message (optional)</label>
+              <textarea id="form-msg" rows="3" placeholder="Tell us about your business and what you'd like Jack to do..."></textarea>
+            </div>
+            <button type="submit" class="btn-primary w-full py-4 rounded-xl text-base font-black mt-2">
+              Get Jack Now →
+            </button>
+          </form>
+          <div id="form-success" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;">
+            Thanks! We'll be in touch on WhatsApp within 24 hours. 🎉
+          </div>
+        </div>
+
+        <!-- Right side: info + WA CTA -->
+        <div class="space-y-6">
+          <div>
+            <h3 class="font-bold text-xl mb-4">What happens next?</h3>
+            <div class="space-y-4">
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">1</div>
+                <div>
+                  <div class="font-semibold text-sm text-white mb-0.5">We reach out within 24 hours</div>
+                  <div class="text-gray-500 text-sm">Philip from Aureus Automation will contact you on WhatsApp to understand your business.</div>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">2</div>
+                <div>
+                  <div class="font-semibold text-sm text-white mb-0.5">We build and train your Jack</div>
+                  <div class="text-gray-500 text-sm">We configure Jack on your business, train him on your knowledge base, and set up all integrations in 3–5 days.</div>
+                </div>
+              </div>
+              <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">3</div>
+                <div>
+                  <div class="font-semibold text-sm text-white mb-0.5">You scan a QR code and go live</div>
+                  <div class="text-gray-500 text-sm">One QR code scan connects your WhatsApp. Jack is live. Your business never sleeps again.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- WhatsApp Direct -->
+          <div class="rounded-2xl p-5" style="background:rgba(37,211,102,0.06);border:1px solid rgba(37,211,102,0.2);">
+            <div class="flex items-center gap-3 mb-2">
+              <svg class="w-6 h-6" fill="#25D366" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              <span class="font-bold text-base" style="color:#25D366;">Chat with Philip directly</span>
+            </div>
+            <p class="text-gray-400 text-sm mb-4">Prefer to talk now? Message Philip on WhatsApp and get answers instantly.</p>
+            <a href="https://wa.me/6591234567?text=Hi%20Philip%2C%20I'm%20interested%20in%20Jack%20AI" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition" style="background:#25D366;color:#0f0f1a;" onmouseover="this.style.background='#20c25b'" onmouseout="this.style.background='#25D366'">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+              Message on WhatsApp
+            </a>
+          </div>
+
+          <!-- Trust signals -->
+          <div class="grid grid-cols-2 gap-3">
+            <div class="rounded-xl p-3 text-center" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
+              <div class="text-lg mb-1">🔒</div>
+              <div class="text-xs text-gray-400 font-medium">Private VPS</div>
+              <div class="text-xs text-gray-600">Your data stays yours</div>
+            </div>
+            <div class="rounded-xl p-3 text-center" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
+              <div class="text-lg mb-1">🇸🇬</div>
+              <div class="text-xs text-gray-400 font-medium">Singapore-based</div>
+              <div class="text-xs text-gray-600">Local support</div>
+            </div>
+            <div class="rounded-xl p-3 text-center" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
+              <div class="text-lg mb-1">⚡</div>
+              <div class="text-xs text-gray-400 font-medium">3–5 day setup</div>
+              <div class="text-xs text-gray-600">Fast deployment</div>
+            </div>
+            <div class="rounded-xl p-3 text-center" style="background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.07);">
+              <div class="text-lg mb-1">📞</div>
+              <div class="text-xs text-gray-400 font-medium">Human support</div>
+              <div class="text-xs text-gray-600">Real people, always</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="py-12 px-4 border-t" style="background:#0a0a14;border-color:rgba(245,158,11,0.08);">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <!-- Brand -->
+        <div class="flex items-center gap-3">
+          <div style="width:36px;height:36px;background:linear-gradient(135deg,#f59e0b,#d97706);border-radius:10px;" class="flex items-center justify-center font-black text-gray-900 text-lg">J</div>
+          <div>
+            <div><span class="font-black text-white">Jack</span><span class="font-black" style="color:#f59e0b;">AI</span> <span class="text-gray-600 text-sm">by Aureus Automation</span></div>
+            <div class="text-xs text-gray-600 mt-0.5">Powering Singapore businesses with AI</div>
+          </div>
+        </div>
+
+        <!-- Links -->
+        <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
+          <a href="https://smartfaqassistant.com" target="_blank" class="hover:text-gray-300 transition-colors">smartfaqassistant.com</a>
+          <span class="text-gray-800">|</span>
+          <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
+          <span class="text-gray-800">|</span>
+          <a href="#" class="hover:text-gray-300 transition-colors">Terms of Service</a>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-sm text-gray-600">
+          © 2026 Aureus Automation
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form JS -->
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('form-name').value.trim();
+      const phone = document.getElementById('form-phone').value.trim();
+      const biz = document.getElementById('form-biz').value;
+      const plan = document.getElementById('form-plan').value;
+      const msg = document.getElementById('form-msg').value.trim();
+
+      if (!name || !phone || !biz || !plan) return;
+
+      // Build WhatsApp message
+      const planLabels = { essential: 'Essential ($199/mo)', pro: 'Pro ($299/mo)', enterprise: 'Enterprise ($499/mo)', unsure: 'Not sure yet' };
+      const bizLabels = { beauty: 'Beauty & Wellness', fnb: 'F&B', retail: 'Retail', professional: 'Professional Services', other: 'Other' };
+      let waMsg = `Hi Philip, I'm interested in Jack AI.\n\nName: ${name}\nWhatsApp: ${phone}\nBusiness: ${bizLabels[biz] || biz}\nPlan: ${planLabels[plan] || plan}`;
+      if (msg) waMsg += `\n\nMessage: ${msg}`;
+
+      const waUrl = `https://wa.me/6591234567?text=${encodeURIComponent(waMsg)}`;
+      window.open(waUrl, '_blank');
+
+      document.getElementById('form-success').classList.remove('hidden');
+      e.target.reset();
+    }
+
+    // Smooth scroll for all anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          const navH = document.querySelector('nav').offsetHeight;
+          const top = target.getBoundingClientRect().top + window.scrollY - navH - 20;
+          window.scrollTo({ top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // Sticky nav shadow on scroll
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 20) {
+        nav.style.boxShadow = '0 4px 30px rgba(0,0,0,0.4)';
+      } else {
+        nav.style.boxShadow = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
