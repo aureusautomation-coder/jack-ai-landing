@@ -760,7 +760,7 @@
           <div class="mb-5">
             <div class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-2">Enterprise</div>
             <div class="flex items-baseline gap-1 mb-1">
-              <span class="text-4xl font-black text-white">SGD 899</span>
+              <span class="text-4xl font-black text-white">SGD 799</span>
               <span class="text-gray-400 text-sm">/month</span>
             </div>
             <div class="text-sm text-gray-500">+ SGD 4,000 one-time setup fee</div>
@@ -975,7 +975,7 @@
                 <option value="" disabled selected>Select a plan</option>
                 <option value="essential">Essential — SGD 299/mo</option>
                 <option value="pro">Pro — SGD 499/mo</option>
-                <option value="enterprise">Enterprise — SGD 899/mo</option>
+                <option value="enterprise">Enterprise — SGD 799/mo</option>
                 <option value="unsure">Not sure yet</option>
               </select>
             </div>
@@ -1106,7 +1106,7 @@
       if (!name || !phone || !biz || !plan) return;
 
       // Build WhatsApp message
-      const planLabels = { essential: 'Essential (SGD 299/mo)', pro: 'Pro (SGD 499/mo)', enterprise: 'Enterprise (SGD 899/mo)', unsure: 'Not sure yet' };
+      const planLabels = { essential: 'Essential (SGD 299/mo)', pro: 'Pro (SGD 499/mo)', enterprise: 'Enterprise (SGD 799/mo)', unsure: 'Not sure yet' };
       const bizLabels = { beauty: 'Beauty & Wellness', fnb: 'F&B', retail: 'Retail', professional: 'Professional Services', other: 'Other' };
       let waMsg = `Hi Philip, I'm interested in Aria AI by Aureus Automation.\n\nName: ${name}\nWhatsApp: ${phone}\nBusiness: ${bizLabels[biz] || biz}\nPlan: ${planLabels[plan] || plan}`;
       if (msg) waMsg += `\n\nMessage: ${msg}`;
