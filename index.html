@@ -1142,5 +1142,86 @@
     });
   </script>
 
+
+<!-- Aria Chat Widget -->
+<style>
+  #aria-chat-bubble {
+    position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+    width: 60px; height: 60px; border-radius: 50%;
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; box-shadow: 0 4px 20px rgba(245,158,11,0.4);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  #aria-chat-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 30px rgba(245,158,11,0.6); }
+  #aria-chat-bubble svg { width: 28px; height: 28px; fill: #0f0f1a; }
+  #aria-chat-window {
+    display: none; position: fixed; bottom: 96px; right: 24px; z-index: 9999;
+    width: 370px; max-height: 500px; border-radius: 20px; overflow: hidden;
+    background: #1a1a2e; border: 1px solid rgba(245,158,11,0.2);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5); flex-direction: column;
+  }
+  #aria-chat-window.open { display: flex; }
+  #aria-chat-header {
+    padding: 14px 18px; display: flex; align-items: center; justify-content: space-between;
+    background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f0f1a;
+  }
+  #aria-chat-header span { font-weight: 800; font-size: 14px; }
+  #aria-chat-messages {
+    flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 10px;
+    max-height: 340px; min-height: 200px;
+  }
+  .aria-msg-bot { background: rgba(245,158,11,0.08); border: 1px solid rgba(245,158,11,0.15); border-radius: 14px 14px 14px 2px; padding: 10px 14px; font-size: 13px; color: #e5e7eb; max-width: 85%; align-self: flex-start; line-height: 1.5; }
+  .aria-msg-user { background: linear-gradient(135deg, #f59e0b, #d97706); border-radius: 14px 14px 2px 14px; padding: 10px 14px; font-size: 13px; color: #0f0f1a; max-width: 85%; align-self: flex-end; font-weight: 500; line-height: 1.5; }
+  #aria-chat-input-area { padding: 12px; border-top: 1px solid rgba(245,158,11,0.1); display: flex; gap: 8px; }
+  #aria-chat-input { flex: 1; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 10px 14px; color: white; font-size: 13px; outline: none; }
+  #aria-chat-input:focus { border-color: rgba(245,158,11,0.4); }
+  #aria-chat-send { background: linear-gradient(135deg, #f59e0b, #d97706); border: none; border-radius: 12px; padding: 10px 16px; color: #0f0f1a; font-weight: 700; font-size: 13px; cursor: pointer; }
+  @media (max-width: 480px) { #aria-chat-window { width: calc(100vw - 32px); right: 16px; bottom: 88px; } }
+</style>
+
+<div id="aria-chat-bubble" onclick="ariaToggleChat()">
+  <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+</div>
+
+<div id="aria-chat-window">
+  <div id="aria-chat-header">
+    <div style="display:flex;align-items:center;gap:8px"><div style="width:28px;height:28px;background:#0f0f1a;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:12px;color:#f59e0b;">A</div><span>Chat with Aria AI</span></div>
+    <button onclick="ariaToggleChat()" style="background:none;border:none;color:#0f0f1a;cursor:pointer;font-size:20px;font-weight:bold;">&#10005;</button>
+  </div>
+  <div id="aria-chat-messages">
+    <div class="aria-msg-bot">Hi! I'm Aria AI. Ask me anything about how I can help your business. What would you like to know?</div>
+  </div>
+  <div id="aria-chat-input-area">
+    <input type="text" id="aria-chat-input" placeholder="Ask about Aria AI..." onkeydown="if(event.key==='Enter')ariaSend()">
+    <button id="aria-chat-send" onclick="ariaSend()">Send</button>
+  </div>
+</div>
+
+<script>
+  const ariaMsgs = [{role:'assistant',content:"Hi! I'm Aria AI. Ask me anything about how I can help your business. What would you like to know?"}];
+  function ariaToggleChat() { document.getElementById('aria-chat-window').classList.toggle('open'); }
+  async function ariaSend() {
+    const input = document.getElementById('aria-chat-input');
+    const text = input.value.trim();
+    if (!text) return;
+    input.value = '';
+    ariaMsgs.push({role:'user',content:text});
+    const el = document.getElementById('aria-chat-messages');
+    el.innerHTML += `<div class="aria-msg-user">${text.replace(/</g,'&lt;')}</div>`;
+    el.innerHTML += `<div class="aria-msg-bot" id="aria-typing" style="opacity:0.5">Thinking...</div>`;
+    el.scrollTop = el.scrollHeight;
+    try {
+      const res = await fetch('/api/aria-chat', {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({messages:ariaMsgs})});
+      const data = await res.json();
+      const reply = data.reply || 'Sorry, something went wrong.';
+      ariaMsgs.push({role:'assistant',content:reply});
+      document.getElementById('aria-typing').outerHTML = `<div class="aria-msg-bot">${reply.replace(/</g,'&lt;').replace(/
+/g,'<br>')}</div>`;
+    } catch { document.getElementById('aria-typing').outerHTML = `<div class="aria-msg-bot">Sorry, I couldn't respond. Please try again.</div>`; }
+    el.scrollTop = el.scrollHeight;
+  }
+</script>
+
 </body>
 </html>
