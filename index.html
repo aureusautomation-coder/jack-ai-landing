@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aria AI — Your AI Chief of Staff | Aureus Automation</title>
-  <meta name="description" content="Aria AI is a fully autonomous AI personal assistant that handles your customers, executes tasks, and works 24/7 on WhatsApp — so you don't have to. By Aureus Automation.">
+  <meta name="description" content="Aria AI is your AI Chief of Staff — she browses websites, generates images and videos, creates PDFs, manages your calendar, sends emails, and works 24/7 on WhatsApp. By Aureus Automation.">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
@@ -158,6 +158,7 @@
     .chat-msg:nth-child(3) { animation-delay: 1.0s; }
     .chat-msg:nth-child(4) { animation-delay: 1.5s; }
     .chat-msg:nth-child(5) { animation-delay: 2.0s; }
+    .chat-msg:nth-child(6) { animation-delay: 2.5s; }
 
     .approval-badge {
       background: linear-gradient(135deg, rgba(245,158,11,0.15), rgba(249,115,22,0.1));
@@ -243,7 +244,7 @@
       <!-- Desktop nav -->
       <div class="hidden md:flex items-center gap-8 text-sm text-gray-400">
         <a href="#how-it-works" class="hover:text-white transition-colors duration-200">How It Works</a>
-        <a href="#features" class="hover:text-white transition-colors duration-200">Features</a>
+        <a href="#features" class="hover:text-white transition-colors duration-200">Skills</a>
         <a href="#pricing" class="hover:text-white transition-colors duration-200">Pricing</a>
         <a href="#testimonials" class="hover:text-white transition-colors duration-200">Reviews</a>
         <a href="#faq" class="hover:text-white transition-colors duration-200">FAQ</a>
@@ -262,7 +263,7 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="mobile-nav-overlay border-t border-gray-800/50 px-4 py-6 space-y-4 text-sm">
       <a href="#how-it-works" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">How It Works</a>
-      <a href="#features" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Features</a>
+      <a href="#features" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Skills</a>
       <a href="#pricing" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Pricing</a>
       <a href="#testimonials" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">Reviews</a>
       <a href="#faq" class="block text-gray-300 hover:text-white py-2" onclick="document.getElementById('mobile-menu').classList.remove('open')">FAQ</a>
@@ -277,7 +278,7 @@
         <!-- Eyebrow -->
         <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-8" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
           <span class="w-2 h-2 rounded-full animate-pulse" style="background:#f59e0b;"></span>
-          Powered by Openclaw · Live on WhatsApp · 3–5 Day Setup
+          15+ AI Skills · Live on WhatsApp · 3–5 Day Setup
         </div>
 
         <!-- Headline -->
@@ -289,7 +290,7 @@
 
         <!-- Subheadline -->
         <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-          Not just a chatbot. Aria is a fully autonomous AI assistant that handles your customers, executes tasks, and works <strong class="text-gray-200 font-semibold">24/7 on WhatsApp</strong> — so you don't have to.
+          Not just a chatbot. Aria is your AI Chief of Staff — she browses websites, generates images and videos, creates PDFs, manages your calendar, sends emails, and works <strong class="text-gray-200 font-semibold">24/7 on WhatsApp</strong>.
         </p>
 
         <!-- CTAs -->
@@ -324,12 +325,12 @@
           <!-- Chat body -->
           <div class="px-3 py-4 space-y-3 text-sm" style="background:url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2220%22 height=%2220%22><rect fill=%22%230d1417%22 width=%2220%22 height=%2220%22/></svg>')">
             <div class="chat-msg flex justify-end">
-              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium leading-snug" style="color:#0f0f1a;">Aria, book me a return flight KL next Friday, back Sunday night. SIA or AirAsia, budget under $400. Hotel near KLCC, 4-star.</div>
+              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium leading-snug" style="color:#0f0f1a;">Aria, take a screenshot of my competitor's website glowbeauty.sg and summarize their pricing</div>
             </div>
             <div class="chat-msg flex gap-2">
               <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">A</div>
               <div class="chat-bubble-aria text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
-                On it! Searching flights and hotels now... ✈️🏨
+                On it! Opening their website now...
                 <div class="flex gap-1 mt-2">
                   <div class="typing-dot"></div>
                   <div class="typing-dot"></div>
@@ -340,21 +341,25 @@
             <div class="chat-msg flex gap-2">
               <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">A</div>
               <div class="chat-bubble-aria text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
-                ✅ Best option found:<br><br>
-                ✈️ <strong>SIA SQ108</strong> Fri 7:25am → KL 8:25am | Return SQ117 Sun 9:10pm<br>
-                💰 <strong>S$346 total</strong> (within budget)<br><br>
-                🏨 <strong>Traders Hotel KLCC</strong> — 4-star, 5 min walk to KLCC<br>
-                💰 <strong>S$185/night</strong> × 2 nights = S$370<br><br>
-                Shall I book both? I'll send you a screenshot to approve before confirming.
+                Done! Here's the screenshot and summary:<br><br>
+                📸 <strong>[screenshot attached]</strong><br><br>
+                💰 <strong>Their pricing:</strong><br>
+                • Basic Facial — $68<br>
+                • Premium Facial — $128<br>
+                • Lash Lift — $48<br><br>
+                Your prices are 15% lower on facials. Want me to create a comparison document?
               </div>
             </div>
             <div class="chat-msg flex justify-end">
-              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium" style="color:#0f0f1a;">Yes, go ahead 👍</div>
+              <div class="chat-bubble-user px-3.5 py-2 max-w-[85%] text-sm font-medium" style="color:#0f0f1a;">Nice! Now create a professional proposal PDF for my new client ABC Salon</div>
             </div>
             <div class="chat-msg flex gap-2">
               <div class="w-7 h-7 rounded-full flex items-center justify-center font-black text-gray-900 text-xs flex-shrink-0 mt-1" style="background:linear-gradient(135deg,#f59e0b,#d97706);">A</div>
               <div class="chat-bubble-aria text-gray-100 px-3.5 py-2.5 max-w-[85%] leading-snug">
-                Filled in your details on SIA. Sending you a screenshot for approval before I hit confirm ✋
+                ✅ Proposal PDF generated!<br><br>
+                📄 <strong>ABC Salon — Service Proposal.pdf</strong><br>
+                📎 <a href="#" class="underline" style="color:#f59e0b;">Download link</a><br><br>
+                Includes your company intro, service packages, pricing table, and terms. Shall I email it to them directly?
               </div>
             </div>
           </div>
@@ -365,25 +370,25 @@
           <!-- Approval Card -->
           <div class="approval-badge rounded-2xl p-4">
             <div class="flex items-center gap-2 mb-3">
-              <span class="text-lg">✅</span>
-              <span class="font-bold text-sm" style="color:#f59e0b;">Aria is requesting your approval</span>
+              <span class="text-lg">📸</span>
+              <span class="font-bold text-sm" style="color:#f59e0b;">Browser screenshot captured</span>
             </div>
-            <div class="text-xs text-gray-400 mb-3 leading-relaxed">Aria is about to confirm your flight booking on singaporeair.com. Review the details below before she proceeds:</div>
+            <div class="text-xs text-gray-400 mb-3 leading-relaxed">Aria browsed glowbeauty.sg and captured a full-page screenshot of their pricing page for your review:</div>
             <div class="rounded-xl overflow-hidden mb-3" style="background:#1a1a2e;border:1px solid rgba(255,255,255,0.08);">
               <div class="px-3 py-2 flex items-center gap-2" style="background:rgba(255,255,255,0.03);border-bottom:1px solid rgba(255,255,255,0.06);">
                 <div class="flex gap-1.5"><div class="w-2.5 h-2.5 rounded-full bg-red-500"></div><div class="w-2.5 h-2.5 rounded-full bg-yellow-500"></div><div class="w-2.5 h-2.5 rounded-full bg-green-500"></div></div>
-                <div class="text-xs text-gray-600 flex-1 text-center">singaporeair.com/booking</div>
+                <div class="text-xs text-gray-600 flex-1 text-center">glowbeauty.sg/pricing</div>
               </div>
               <div class="p-3 text-xs text-gray-400 space-y-1.5">
-                <div class="flex justify-between"><span class="text-gray-500">Flight:</span><span class="text-white">SQ108 + SQ117 (Return)</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Depart:</span><span class="text-white">Fri 14 Nov, 7:25am SIN→KUL</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Return:</span><span class="text-white">Sun 16 Nov, 9:10pm KUL→SIN</span></div>
-                <div class="flex justify-between"><span class="text-gray-500">Total:</span><span class="text-white font-semibold">S$346</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Page:</span><span class="text-white">Pricing & Packages</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Basic Facial:</span><span class="text-white">$68</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Premium Facial:</span><span class="text-white">$128</span></div>
+                <div class="flex justify-between"><span class="text-gray-500">Lash Lift:</span><span class="text-white">$48</span></div>
               </div>
             </div>
             <div class="flex gap-2">
-              <button class="flex-1 py-2 rounded-xl text-sm font-bold" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">Approve ✓</button>
-              <button class="flex-1 py-2 rounded-xl text-sm font-semibold" style="background:rgba(239,68,68,0.1);border:1px solid rgba(239,68,68,0.3);color:#f87171;">Reject</button>
+              <button class="flex-1 py-2 rounded-xl text-sm font-bold" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">Save to Notes</button>
+              <button class="flex-1 py-2 rounded-xl text-sm font-semibold" style="background:rgba(99,102,241,0.1);border:1px solid rgba(99,102,241,0.3);color:#818cf8;">Create Comparison</button>
             </div>
           </div>
 
@@ -391,9 +396,9 @@
           <div class="rounded-2xl p-4" style="background:#1a1a2e;border:1px solid rgba(99,102,241,0.2);">
             <div class="flex items-center gap-2 mb-2">
               <span class="text-base">💡</span>
-              <span class="font-bold text-sm text-indigo-300">Your AI. Any task.</span>
+              <span class="font-bold text-sm text-indigo-300">15+ skills. One WhatsApp chat.</span>
             </div>
-            <div class="text-xs text-gray-400 leading-relaxed">Aria handles personal errands, business ops, research, drafting — anything you'd ask a trusted assistant. Your bot's name is fully yours to choose.</div>
+            <div class="text-xs text-gray-400 leading-relaxed">Aria browses websites, generates images and videos, creates PDFs, manages your calendar, sends emails, generates QR codes, and much more — all from a single WhatsApp conversation. Your AI Chief of Staff, always on duty.</div>
           </div>
         </div>
       </div>
@@ -409,23 +414,18 @@
       </div>
       <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
       <div class="text-center">
+        <div class="text-3xl font-black text-white">15+</div>
+        <div class="text-xs text-gray-500 mt-0.5">AI Skills</div>
+      </div>
+      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
+      <div class="text-center">
         <div class="text-3xl font-black text-white">&lt; 1 min</div>
         <div class="text-xs text-gray-500 mt-0.5">Response time</div>
       </div>
       <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
       <div class="text-center">
-        <div class="text-3xl font-black text-white">3–5 days</div>
-        <div class="text-xs text-gray-500 mt-0.5">Setup time</div>
-      </div>
-      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
-      <div class="text-center">
-        <div class="text-3xl font-black text-white">0</div>
-        <div class="text-xs text-gray-500 mt-0.5">Tech skills needed</div>
-      </div>
-      <div class="w-px bg-gray-800 hidden md:block self-stretch"></div>
-      <div class="text-center">
         <div class="text-3xl font-black">🇸🇬</div>
-        <div class="text-xs text-gray-500 mt-0.5">Built for Singapore</div>
+        <div class="text-xs text-gray-500 mt-0.5">Singapore-based</div>
       </div>
     </div>
   </div>
@@ -444,12 +444,12 @@
         <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(245,158,11,0.15);">
           <div class="text-3xl mb-3">🔁</div>
           <h3 class="font-bold text-lg mb-2">Admin tasks eat your whole day</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Checking bookings, filling forms, drafting messages, following up leads. You're doing $10/hr work when you should be doing $500/hr work.</p>
+          <p class="text-gray-400 text-sm leading-relaxed">Researching competitors, creating proposals, sending follow-up emails, managing your calendar. You're doing $10/hr work when you should be doing $500/hr work.</p>
         </div>
         <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(99,102,241,0.15);">
           <div class="text-3xl mb-3">🤖</div>
           <h3 class="font-bold text-lg mb-2">Chatbots are too simple</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">They answer FAQs but can't DO anything. You still need a human to check the website, make the booking, send the follow-up.</p>
+          <p class="text-gray-400 text-sm leading-relaxed">They answer FAQs but can't DO anything. You still need a human to browse the website, create the PDF, generate the image, or send the email.</p>
         </div>
       </div>
     </div>
@@ -465,7 +465,7 @@
           Simple 3-Step Process
         </div>
         <h2 class="text-3xl md:text-5xl font-black mb-4">Up and running in 3–5 days</h2>
-        <p class="text-gray-400 text-lg max-w-xl mx-auto">We do all the work. You just scan a QR code and start talking to your AI assistant.</p>
+        <p class="text-gray-400 text-lg max-w-xl mx-auto">We do all the work. You just scan a QR code and start talking to your AI Chief of Staff.</p>
       </div>
 
       <div class="space-y-0">
@@ -480,7 +480,7 @@
               <h3 class="font-black text-xl text-white">We Set Everything Up</h3>
               <span class="text-xs px-2.5 py-1 rounded-full font-semibold" style="background:rgba(245,158,11,0.1);color:#f59e0b;border:1px solid rgba(245,158,11,0.2);">Days 1–5</span>
             </div>
-            <p class="text-gray-400 leading-relaxed">We configure your personal AI assistant, name it whatever you like, train it on your business — services, prices, tone, SOPs, policies — and connect it to WhatsApp. You just scan one QR code. Zero technical knowledge required.</p>
+            <p class="text-gray-400 leading-relaxed">We configure your personal AI assistant, name her whatever you like, train her on your business — services, prices, tone, SOPs, policies — and activate all 15+ skills. You just scan one QR code. Zero technical knowledge required.</p>
           </div>
         </div>
 
@@ -491,8 +491,8 @@
             <div class="w-px flex-1 my-1" style="background:linear-gradient(to bottom,rgba(99,102,241,0.4),rgba(99,102,241,0.1));min-height:40px;"></div>
           </div>
           <div class="pb-12 pt-1">
-            <h3 class="font-black text-xl text-white mb-2">Aria Handles Your Customers</h3>
-            <p class="text-gray-400 leading-relaxed">Aria replies to every customer enquiry 24/7 in your brand's voice. He knows your business inside out. For anything that needs a human touch, Aria escalates to you on Slack with a full summary — so you never miss anything important.</p>
+            <h3 class="font-black text-xl text-white mb-2">Aria Becomes Your Chief of Staff</h3>
+            <p class="text-gray-400 leading-relaxed">Aria works 24/7 on WhatsApp. She can search the web, browse websites, generate images and videos, create professional PDFs, manage your calendar, send emails, set reminders, and more — all from a single chat. Just tell her what you need.</p>
           </div>
         </div>
 
@@ -502,8 +502,8 @@
             <div class="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm z-10 flex-shrink-0" style="background:linear-gradient(135deg,#a78bfa,#8b5cf6);color:white;">3</div>
           </div>
           <div class="pt-1">
-            <h3 class="font-black text-xl text-white mb-2">Aria Executes Tasks For You</h3>
-            <p class="text-gray-400 leading-relaxed">Tell Aria to check a website, fill a form, research a supplier, or draft your next Instagram post. Aria does it autonomously — and before any critical action (form submission, booking, payment), he pauses and sends you a screenshot for approval. You stay fully in control.</p>
+            <h3 class="font-black text-xl text-white mb-2">You Focus on What Matters</h3>
+            <p class="text-gray-400 leading-relaxed">While you focus on growing your business, Aria handles the daily grind — competitor research, proposal creation, client follow-ups, calendar management, and content generation. She works tirelessly so you don't have to.</p>
           </div>
         </div>
       </div>
@@ -517,74 +517,123 @@
     <div class="max-w-6xl mx-auto">
       <div class="text-center mb-16">
         <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
-          Full Feature Suite
+          15+ AI Skills Built In
         </div>
-        <h2 class="text-3xl md:text-5xl font-black mb-4">Everything your business needs</h2>
-        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Aria isn't just one thing — it's your entire digital operations team, wrapped in one WhatsApp number.</p>
+        <h2 class="text-3xl md:text-5xl font-black mb-4">One assistant. Every skill you need.</h2>
+        <p class="text-gray-400 text-lg max-w-2xl mx-auto">Aria isn't just one thing — she's your entire operations team, wrapped in one WhatsApp number. Here's what she can do:</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
 
-        <!-- Feature 1 -->
-        <div class="card-glass rounded-2xl p-5 lg:col-span-2">
-          <div class="feature-icon-wrap mb-4" style="background:rgba(245,158,11,0.1);">🧠</div>
-          <h3 class="font-bold text-lg mb-2">Personal AI Assistant</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Your own AI assistant on WhatsApp DM. Handles business ops, personal tasks, research, reminders, and more. Knows your context inside out — and gets smarter over time.</p>
+        <!-- Feature 1 — Web Search -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(245,158,11,0.1);">🔍</div>
+          <h3 class="font-bold text-base mb-2">Web Search</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Ask Aria anything and she'll search the web in real-time — competitor prices, supplier info, market trends, news articles — and summarise the results for you.</p>
         </div>
 
-        <!-- Feature 2 -->
-        <div class="card-glass rounded-2xl p-5 lg:col-span-2">
-          <div class="feature-icon-wrap mb-4" style="background:rgba(37,211,102,0.1);">💬</div>
-          <h3 class="font-bold text-lg mb-2">24/7 Customer FAQ Bot</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">A separate bot handles all customer enquiries automatically. Knows your services, prices, and policies. Answers in under a minute, any hour. Escalates complex cases directly to you.</p>
+        <!-- Feature 2 — Browser Automation -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(37,211,102,0.1);">🌐</div>
+          <h3 class="font-bold text-base mb-2">Browser Automation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria opens real websites, takes screenshots, fills forms, and navigates pages — just like a human. Perfect for competitor research and monitoring.</p>
         </div>
 
-        <!-- Feature 3 — Browser Automation (highlight) -->
+        <!-- Feature 3 — AI Image Generation -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(236,72,153,0.1);">🎨</div>
+          <h3 class="font-bold text-base mb-2">AI Image Generation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Generate stunning images with Flux AI. Product mockups, social media graphics, marketing visuals — just describe what you want and Aria creates it.</p>
+        </div>
+
+        <!-- Feature 4 — AI Video Generation -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(139,92,246,0.1);">🎬</div>
+          <h3 class="font-bold text-base mb-2">AI Video Generation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Create short AI-generated videos for social media, ads, or presentations. Describe your concept and Aria produces the video for you.</p>
+        </div>
+
+        <!-- Feature 5 — PDF Generation (highlight) -->
         <div class="rounded-2xl p-5 lg:col-span-2" style="background:linear-gradient(135deg,rgba(245,158,11,0.08),rgba(249,115,22,0.05));border:1px solid rgba(245,158,11,0.2);">
           <div class="flex items-center gap-2 mb-3">
-            <div class="feature-icon-wrap" style="background:rgba(245,158,11,0.15);">🌐</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">ENTERPRISE</span>
+            <div class="feature-icon-wrap" style="background:rgba(245,158,11,0.15);">📄</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">POPULAR</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">Browser Automation</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Aria can browse websites, fill forms, click buttons, switch tabs, and complete multi-step tasks — just like a human would. Check bookings, submit applications, research suppliers. All on command.</p>
+          <h3 class="font-bold text-lg mb-2">PDF Generation</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Create professional proposals, invoices, quotations, and reports as PDF documents. Aria formats everything beautifully and sends you the download link — ready to forward to your clients.</p>
         </div>
 
-        <!-- Feature 4 — Approval Gates -->
+        <!-- Feature 6 — Calendar Management (highlight) -->
         <div class="rounded-2xl p-5 lg:col-span-2" style="background:linear-gradient(135deg,rgba(16,185,129,0.06),rgba(5,150,105,0.04));border:1px solid rgba(16,185,129,0.2);">
           <div class="flex items-center gap-2 mb-3">
-            <div class="feature-icon-wrap" style="background:rgba(16,185,129,0.1);">✅</div>
-            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.3);">ENTERPRISE</span>
+            <div class="feature-icon-wrap" style="background:rgba(16,185,129,0.1);">📅</div>
+            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.3);">ESSENTIAL</span>
           </div>
-          <h3 class="font-bold text-lg mb-2">Approval Gates</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Before any critical action — form submission, payment, booking — Aria pauses and sends you a screenshot via WhatsApp for approval. You stay in complete control. Nothing happens without your say-so.</p>
+          <h3 class="font-bold text-lg mb-2">Calendar Management</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria manages your Google Calendar — creates events, checks availability, sets meetings, and sends you daily schedule summaries. Never double-book again. Just tell her "schedule a meeting with John tomorrow at 3pm."</p>
         </div>
 
-        <!-- Feature 5 -->
+        <!-- Feature 7 — Reminders -->
         <div class="card-glass rounded-2xl p-5">
-          <div class="feature-icon-wrap mb-4" style="background:rgba(236,72,153,0.1);">📢</div>
-          <h3 class="font-bold text-base mb-2">Marketing & Content Agent</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Dedicated content agent on Slack drafts Instagram posts, promo messages, and campaign ideas. Everything reviewed before publishing.</p>
+          <div class="feature-icon-wrap mb-4" style="background:rgba(249,115,22,0.1);">⏰</div>
+          <h3 class="font-bold text-base mb-2">Reminders &amp; Scheduled Tasks</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Set one-time or recurring reminders. "Remind me to follow up with ABC Salon every Monday at 9am." Aria never forgets.</p>
         </div>
 
-        <!-- Feature 6 -->
+        <!-- Feature 8 — Voice Replies -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(6,182,212,0.1);">🎤</div>
+          <h3 class="font-bold text-base mb-2">Voice Replies</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria can reply with natural-sounding English voice messages using text-to-speech. Perfect for when you're driving or prefer audio responses.</p>
+        </div>
+
+        <!-- Feature 9 — Weather -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(56,189,248,0.1);">🌤️</div>
+          <h3 class="font-bold text-base mb-2">Weather (Any City)</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Get real-time weather forecasts for any city in the world. Planning a trip or checking conditions for an outdoor event? Just ask Aria.</p>
+        </div>
+
+        <!-- Feature 10 — QR Code Generator -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(168,85,247,0.1);">📱</div>
+          <h3 class="font-bold text-base mb-2">QR Code Generator</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Generate QR codes for any URL, text, or contact info instantly. Perfect for marketing materials, business cards, or event check-ins.</p>
+        </div>
+
+        <!-- Feature 11 — URL Shortener -->
         <div class="card-glass rounded-2xl p-5">
           <div class="feature-icon-wrap mb-4" style="background:rgba(99,102,241,0.1);">🔗</div>
-          <h3 class="font-bold text-base mb-2">Slack Integration</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Seamless escalation from WhatsApp to Slack. Aria notifies your team when human follow-up is needed — with full context and customer summary.</p>
+          <h3 class="font-bold text-base mb-2">URL Shortener</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Shorten any long URL into a clean, shareable link. Great for WhatsApp messages, social media posts, and marketing campaigns.</p>
         </div>
 
-        <!-- Feature 7 -->
+        <!-- Feature 12 — Email Sending -->
         <div class="card-glass rounded-2xl p-5">
-          <div class="feature-icon-wrap mb-4" style="background:rgba(6,182,212,0.1);">🔒</div>
-          <h3 class="font-bold text-base mb-2">Human Takeover</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Pause Aria for any conversation and reply personally. Resume the bot when done. Full, instant control from WhatsApp itself.</p>
+          <div class="feature-icon-wrap mb-4" style="background:rgba(234,179,8,0.1);">📧</div>
+          <h3 class="font-bold text-base mb-2">Email Sending</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Draft and send emails directly from WhatsApp. "Aria, email john@abc.com with the proposal we discussed." She composes and sends it.</p>
         </div>
 
-        <!-- Feature 8 -->
+        <!-- Feature 13 — News Briefing -->
         <div class="card-glass rounded-2xl p-5">
-          <div class="feature-icon-wrap mb-4" style="background:rgba(139,92,246,0.1);">📋</div>
-          <h3 class="font-bold text-base mb-2">Audit Trail</h3>
-          <p class="text-gray-400 text-sm leading-relaxed">Every browser action logged with timestamps and screenshots. Full visibility into what Aria did, when he did it, and what was approved.</p>
+          <div class="feature-icon-wrap mb-4" style="background:rgba(239,68,68,0.1);">📰</div>
+          <h3 class="font-bold text-base mb-2">News Briefing</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Get curated news summaries on any topic. "Aria, what's the latest news on Singapore property market?" She delivers a concise briefing.</p>
+        </div>
+
+        <!-- Feature 14 — Contact Book -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(16,185,129,0.1);">👥</div>
+          <h3 class="font-bold text-base mb-2">Contact Book</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Store and retrieve contacts on the go. "Save John from ABC Salon, +65 9123 4567." Later: "What's John's number?" Aria remembers.</p>
+        </div>
+
+        <!-- Feature 15 — AI Avatar Videos -->
+        <div class="card-glass rounded-2xl p-5">
+          <div class="feature-icon-wrap mb-4" style="background:rgba(245,158,11,0.1);">🧑‍💼</div>
+          <h3 class="font-bold text-base mb-2">AI Avatar Videos</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Generate talking-head spokesperson videos with AI avatars. Perfect for product demos, training videos, and personalised client messages.</p>
         </div>
 
       </div>
@@ -592,10 +641,40 @@
       <!-- Bottom CTA strip -->
       <div class="mt-8 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-5" style="background:rgba(245,158,11,0.05);border:1px solid rgba(245,158,11,0.15);">
         <div>
-          <div class="font-bold text-lg mb-1">Not just a chatbot. An AI that works.</div>
+          <div class="font-bold text-lg mb-1">Not just a chatbot. An AI Chief of Staff with 15+ skills.</div>
           <div class="text-gray-400 text-sm">Aria AI can do things no other WhatsApp assistant can do. See the full capability in action.</div>
         </div>
         <a href="#contact" class="btn-primary whitespace-nowrap px-6 py-3 rounded-xl font-bold text-sm flex-shrink-0">Book a Demo →</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider mx-auto max-w-4xl"></div>
+
+  <!-- ===== WHO IT'S FOR ===== -->
+  <section class="py-24 px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-sm font-medium mb-4" style="background:rgba(245,158,11,0.08);border:1px solid rgba(245,158,11,0.2);color:#fbbf24;">
+        Built For Business Owners
+      </div>
+      <h2 class="text-3xl md:text-5xl font-black mb-4">Who is Aria for?</h2>
+      <p class="text-gray-400 text-lg mb-14 max-w-2xl mx-auto">Any Singapore business owner who wants an AI that doesn't just talk — but actually works.</p>
+      <div class="grid md:grid-cols-3 gap-5 text-left">
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(236,72,153,0.15);">
+          <div class="text-3xl mb-3">💅</div>
+          <h3 class="font-bold text-lg mb-2">Beauty &amp; Wellness</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria manages your calendar, sends appointment reminders, creates promotional images for Instagram, generates QR codes for your menu, and emails invoices to clients — all from WhatsApp.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(245,158,11,0.15);">
+          <div class="text-3xl mb-3">🍜</div>
+          <h3 class="font-bold text-lg mb-2">F&amp;B &amp; Retail</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria browses supplier websites to check stock, generates promotional videos, creates PDF menus, sets reminders for restocking, and gives you daily news briefings on your industry.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background:#1a1a2e;border:1px solid rgba(99,102,241,0.15);">
+          <div class="text-3xl mb-3">💼</div>
+          <h3 class="font-bold text-lg mb-2">Professional Services</h3>
+          <p class="text-gray-400 text-sm leading-relaxed">Aria creates professional proposals and invoices as PDFs, manages your meeting calendar, sends follow-up emails, researches competitors via browser automation, and generates AI avatar videos for client presentations.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -620,92 +699,86 @@
           <div class="mb-5">
             <div class="text-gray-400 text-sm font-semibold uppercase tracking-wider mb-2">Essential</div>
             <div class="flex items-baseline gap-1 mb-1">
-              <span class="text-4xl font-black text-white">$199</span>
+              <span class="text-4xl font-black text-white">SGD 499</span>
               <span class="text-gray-400 text-sm">/month</span>
             </div>
-            <div class="text-sm text-gray-500">+ $800 one-time setup fee</div>
+            <div class="text-sm text-gray-500">+ SGD 1,500 one-time setup fee</div>
           </div>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Your own personal AI assistant on WhatsApp. Handles your day-to-day operations and knows your business inside out.</p>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Your own AI assistant on WhatsApp with core skills — search, calendar, reminders, contacts, weather, QR codes, and URL shortener.</p>
           <div class="space-y-3 mb-7 text-sm">
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Personal AI Assistant (WhatsApp)</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">WhatsApp Channel</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Memory &amp; Task Management</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Business Knowledge Base</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">FAQ Customer Bot</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Marketing Agent</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">AI Assistant on WhatsApp</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Web Search</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Calendar Management</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Reminders &amp; Scheduled Tasks</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Contact Book</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Weather (Any City)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">QR Code Generator</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">URL Shortener</span></div>
             <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Browser Automation</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Slack Integration</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Image / Video Generation</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">PDF Generation</span></div>
           </div>
           <a href="#contact" class="block text-center py-3 rounded-xl text-sm font-bold transition" style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:white;" onmouseover="this.style.background='rgba(255,255,255,0.12)'" onmouseout="this.style.background='rgba(255,255,255,0.07)'">
             Get Essential →
           </a>
         </div>
 
-        <!-- Pro -->
-        <div class="rounded-2xl p-6 card-glass card-glow-amber">
-          <div class="mb-5">
-            <div class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-2">Pro</div>
-            <div class="flex items-baseline gap-1 mb-1">
-              <span class="text-4xl font-black text-white">$299</span>
-              <span class="text-gray-400 text-sm">/month</span>
-            </div>
-            <div class="text-sm text-gray-500">+ $1,500 one-time setup fee</div>
-          </div>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Everything in Essential, plus a dedicated FAQ bot for your customers and Slack-based escalation for your team.</p>
-          <div class="space-y-3 mb-7 text-sm">
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Essential</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">FAQ Customer Bot (WhatsApp)</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Slack Integration &amp; Escalation</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Customer Enquiry Handling 24/7</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Marketing Agent</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Browser Automation</span></div>
-          </div>
-          <a href="#contact" class="block text-center py-3 rounded-xl text-sm font-bold transition" style="background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.4);color:#818cf8;" onmouseover="this.style.background='rgba(99,102,241,0.25)'" onmouseout="this.style.background='rgba(99,102,241,0.15)'">
-            Get Pro →
-          </a>
-        </div>
-
-        <!-- Enterprise — Popular -->
+        <!-- Pro — Popular -->
         <div class="pricing-card-popular rounded-2xl p-6 relative">
           <!-- Badge -->
           <div class="absolute -top-3 left-1/2 -translate-x-1/2">
             <span class="badge-popular px-3 py-1 rounded-full text-white inline-block">★ Most Popular</span>
           </div>
           <div class="mb-5 mt-2">
-            <div class="font-semibold uppercase tracking-wider text-sm mb-2" style="color:#c084fc;">Enterprise</div>
+            <div class="font-semibold uppercase tracking-wider text-sm mb-2" style="color:#c084fc;">Pro</div>
             <div class="flex items-baseline gap-1 mb-1">
-              <span class="text-4xl font-black text-white">$499</span>
+              <span class="text-4xl font-black text-white">SGD 799</span>
               <span class="text-gray-400 text-sm">/month</span>
             </div>
-            <div class="text-sm text-gray-500">+ $2,500 one-time setup fee</div>
+            <div class="text-sm text-gray-500">+ SGD 2,500 one-time setup fee</div>
           </div>
-          <p class="text-gray-400 text-sm mb-6 leading-relaxed">The full Aria AI experience — browser automation, marketing agent, approval gates, audit trail, and complete personal + business task execution.</p>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">Everything in Essential plus browser automation, image generation, video generation, PDF creation, email sending, news briefing, and voice replies.</p>
           <div class="space-y-3 mb-7 text-sm">
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Pro</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Marketing &amp; Content Agent (Slack)</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Browser Automation (forms, clicks, navigation)</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Approval Gates &amp; Audit Trail</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">OTP / 2FA Handling</span></div>
-            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Full Task Execution</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Essential</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Browser Automation (screenshots, forms)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">AI Image Generation (Flux)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">AI Video Generation</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">PDF Generation (proposals, invoices)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Email Sending</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">News Briefing</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Voice Replies (English TTS)</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">AI Avatar Videos</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-no mt-0.5 flex-shrink-0">✗</span><span class="text-gray-600">Custom Integrations</span></div>
           </div>
           <a href="#contact" class="btn-primary block text-center py-3.5 rounded-xl text-sm font-black">
+            Get Pro →
+          </a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="rounded-2xl p-6 card-glass card-glow-amber">
+          <div class="mb-5">
+            <div class="text-indigo-400 text-sm font-semibold uppercase tracking-wider mb-2">Enterprise</div>
+            <div class="flex items-baseline gap-1 mb-1">
+              <span class="text-4xl font-black text-white">SGD 1,299</span>
+              <span class="text-gray-400 text-sm">/month</span>
+            </div>
+            <div class="text-sm text-gray-500">+ SGD 4,000 one-time setup fee</div>
+          </div>
+          <p class="text-gray-400 text-sm mb-6 leading-relaxed">The full Aria AI experience — everything in Pro plus AI avatar videos, custom integrations, priority support, and a dedicated VPS.</p>
+          <div class="space-y-3 mb-7 text-sm">
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Everything in Pro</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">AI Avatar Video Generation</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Custom Integrations</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Priority Support</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">Dedicated VPS</span></div>
+            <div class="flex items-start gap-2.5"><span class="check-yes mt-0.5 flex-shrink-0">✓</span><span class="text-gray-300">All 15+ AI Skills Included</span></div>
+          </div>
+          <a href="#contact" class="block text-center py-3 rounded-xl text-sm font-bold transition" style="background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.4);color:#818cf8;" onmouseover="this.style.background='rgba(99,102,241,0.25)'" onmouseout="this.style.background='rgba(99,102,241,0.15)'">
             Get Enterprise →
           </a>
         </div>
 
-      </div>
-
-      <!-- SimplyBook Add-on -->
-      <div class="mt-8 rounded-2xl p-6 flex flex-col md:flex-row items-center gap-5" style="background:rgba(16,185,129,0.05);border:1px solid rgba(16,185,129,0.2);">
-        <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0" style="background:rgba(16,185,129,0.1);">📅</div>
-        <div class="flex-1">
-          <div class="flex flex-wrap items-center gap-3 mb-1">
-            <h3 class="font-bold text-lg">SimplyBook Live Integration</h3>
-            <span class="text-xs px-2.5 py-1 rounded-full font-bold" style="background:rgba(16,185,129,0.1);color:#34d399;border:1px solid rgba(16,185,129,0.3);">ADD-ON</span>
-          </div>
-          <p class="text-gray-400 text-sm leading-relaxed">Real-time availability checking, live booking, and rescheduling directly from WhatsApp. Requires an active SimplyBook account. One-time setup: <strong class="text-white">$500</strong>.</p>
-        </div>
-        <a href="#contact" class="whitespace-nowrap text-sm font-bold px-5 py-2.5 rounded-xl flex-shrink-0 transition" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;" onmouseover="this.style.background='rgba(16,185,129,0.2)'" onmouseout="this.style.background='rgba(16,185,129,0.1)'">Add to Plan →</a>
       </div>
     </div>
   </section>
@@ -730,12 +803,12 @@
           <div class="text-xs text-gray-500 mt-0.5">Availability</div>
         </div>
         <div class="stat-card rounded-2xl p-4 text-center">
-          <div class="text-2xl font-black text-white">&lt; 1 min</div>
-          <div class="text-xs text-gray-500 mt-0.5">Response Time</div>
+          <div class="text-2xl font-black text-white">15+</div>
+          <div class="text-xs text-gray-500 mt-0.5">AI Skills</div>
         </div>
         <div class="stat-card rounded-2xl p-4 text-center">
-          <div class="text-2xl font-black text-white">3–5 days</div>
-          <div class="text-xs text-gray-500 mt-0.5">Setup Time</div>
+          <div class="text-2xl font-black text-white">&lt; 1 min</div>
+          <div class="text-xs text-gray-500 mt-0.5">Response Time</div>
         </div>
       </div>
 
@@ -744,7 +817,7 @@
         <!-- Testimonial 1 — Beauty Salon -->
         <div class="rounded-2xl p-6 card-glass card-glow-amber">
           <div class="testimonial-stars text-sm mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-5">"Before Aria, I was replying to WhatsApp messages at midnight. Now Aria handles all my enquiries and bookings 24/7. My customers think I'm more responsive than ever — they don't even know it's AI."</p>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"Aria manages my entire calendar, sends reminders to clients, and even creates promotional images for my Instagram. Last week she generated a PDF proposal for a corporate client — it looked so professional. I can't believe this all runs from WhatsApp."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#ec4899,#be185d);color:white;">JL</div>
             <div>
@@ -758,7 +831,7 @@
         <!-- Testimonial 2 — F&B -->
         <div class="rounded-2xl p-6 card-glass card-glow-amber">
           <div class="testimonial-stars text-sm mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-5">"We run three stalls and I used to drown in WhatsApp messages about menus, hours, and party bookings. Aria handles all of it now. The browser automation is wild — Aria actually logs into our supplier portal to check stock. It's like having a full-time ops person."</p>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"The browser automation is wild — Aria takes screenshots of my competitor's menus so I can adjust pricing. She also generates QR codes for our table ordering and creates short promo videos for our social media. It's like having a full-time digital assistant for a fraction of the cost."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#f59e0b,#d97706);color:#0f0f1a;">RN</div>
             <div>
@@ -772,7 +845,7 @@
         <!-- Testimonial 3 — Professional Services -->
         <div class="rounded-2xl p-6 card-glass card-glow-amber">
           <div class="testimonial-stars text-sm mb-3">★★★★★</div>
-          <p class="text-gray-300 text-sm leading-relaxed mb-5">"Aria handles our client enquiries, qualifies leads, and drafts our LinkedIn content. The Slack escalation means I never miss an important client — Aria summarises everything before handing it to me. It's like having a trained junior associate on call, around the clock."</p>
+          <p class="text-gray-300 text-sm leading-relaxed mb-5">"I asked Aria to research a potential client's website, then generate a tailored proposal PDF and email it to them — all in one conversation. She also creates AI avatar videos for our LinkedIn. The voice reply feature is great when I'm driving between meetings. This is next-level."</p>
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-full flex items-center justify-center font-bold text-sm flex-shrink-0" style="background:linear-gradient(135deg,#818cf8,#6366f1);color:white;">SC</div>
             <div>
@@ -805,7 +878,7 @@
             <h3 class="font-bold text-base text-white">What is Aria AI?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5 transition-transform" style="transform:rotate(0deg)" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Aria AI is a done-for-you AI assistant built on Openclaw — the world's most powerful personal AI platform. We configure, train, and deploy it specifically for your business on WhatsApp. Unlike a simple FAQ bot, Aria can actually execute tasks, browse websites, and complete workflows on your behalf.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Aria AI is your AI Chief of Staff — a fully autonomous AI personal assistant that lives on WhatsApp. She comes with 15+ built-in skills including web search, browser automation, image and video generation, PDF creation, calendar management, email sending, voice replies, and much more. We configure, train, and deploy her specifically for your business in 3–5 days.</p>
         </div>
 
         <div class="faq-item px-6 py-5">
@@ -813,7 +886,7 @@
             <h3 class="font-bold text-base text-white">How is Aria different from a normal chatbot?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Most chatbots just answer questions from a pre-set script. Aria can actually <em>execute</em> tasks — browse websites, fill forms, make bookings, check stock levels, and complete multi-step workflows autonomously. He also escalates intelligently to you when human judgment is needed, with full context.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Most chatbots just answer questions from a pre-set script. Aria can actually <em>execute</em> tasks — she browses websites and takes screenshots, generates professional images and videos, creates PDF proposals and invoices, manages your Google Calendar, sends emails, sets reminders, generates QR codes, and even creates AI avatar spokesperson videos. She's not a chatbot — she's a Chief of Staff.</p>
         </div>
 
         <div class="faq-item px-6 py-5">
@@ -821,23 +894,23 @@
             <h3 class="font-bold text-base text-white">Do I need to be technical to use Aria?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Not at all. We handle everything — setup, training, configuration, deployment. You just scan one QR code to connect WhatsApp, and you're ready. Ongoing use is just chatting with Aria on WhatsApp like you'd chat with any contact.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Not at all. We handle everything — setup, training, configuration, deployment. You just scan one QR code to connect WhatsApp, and you're ready. Ongoing use is just chatting with Aria on WhatsApp like you'd chat with any contact. Say "generate an image of a sunset" or "remind me to call John at 3pm" — it's that simple.</p>
         </div>
 
         <div class="faq-item px-6 py-5">
           <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
-            <h3 class="font-bold text-base text-white">What happens if Aria can't answer something?</h3>
+            <h3 class="font-bold text-base text-white">What are the 15+ skills Aria has?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Aria escalates to you via Slack (Pro/Enterprise) or WhatsApp, with a full summary of the customer's question so you can respond personally. The customer receives a polite holding message so they never feel ignored.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Aria's skills include: Web Search, Browser Automation (screenshots, form filling), AI Image Generation (Flux), AI Video Generation, PDF Generation (proposals, invoices), Calendar Management, Reminders &amp; Scheduled Tasks, Voice Replies (English TTS), Weather (any city), QR Code Generator, URL Shortener, Email Sending, News Briefing, Contact Book, and AI Avatar Videos (talking head spokesperson). The skills available depend on your plan.</p>
         </div>
 
         <div class="faq-item px-6 py-5">
           <div class="flex items-start justify-between gap-4 cursor-pointer" onclick="this.parentElement.querySelector('p').style.display = this.parentElement.querySelector('p').style.display === 'block' ? 'none' : 'block'">
-            <h3 class="font-bold text-base text-white">Can I customise my assistant's name, personality and knowledge?</h3>
+            <h3 class="font-bold text-base text-white">Can I customise my assistant's name and personality?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes — including the name. Your assistant can be called Aria, Max, Zara, or anything you like. We train it specifically on your business — your services, pricing, policies, tone of voice, and escalation rules. It gets smarter over time as we refine based on real conversations. To add new info anytime, just tell your assistant directly on WhatsApp.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes — including the name. Your assistant can be called Aria, Max, Zara, or anything you like. We train her specifically on your business — your services, pricing, policies, tone of voice, and workflow preferences. She gets smarter over time as we refine based on real conversations. To add new info anytime, just tell your assistant directly on WhatsApp.</p>
         </div>
 
         <div class="faq-item px-6 py-5">
@@ -845,7 +918,7 @@
             <h3 class="font-bold text-base text-white">Is my data secure?</h3>
             <svg class="w-5 h-5 text-gray-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
           </div>
-          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes. Aria AI runs on your own private VPS — your data never goes to shared servers. All conversations are end-to-end encrypted. We never sell or share your data. Your knowledge base belongs entirely to you.</p>
+          <p class="text-gray-400 text-sm leading-relaxed mt-3">Yes. Enterprise plan clients get their own dedicated VPS — your data never goes to shared servers. All conversations are encrypted. We never sell or share your data. Your knowledge base, contacts, and calendar data belong entirely to you.</p>
         </div>
 
       </div>
@@ -899,9 +972,9 @@
               <label class="block text-sm font-medium text-gray-400 mb-1.5">Plan Interested In</label>
               <select id="form-plan" required>
                 <option value="" disabled selected>Select a plan</option>
-                <option value="essential">Essential — $199/mo</option>
-                <option value="pro">Pro — $299/mo</option>
-                <option value="enterprise">Enterprise — $499/mo</option>
+                <option value="essential">Essential — SGD 499/mo</option>
+                <option value="pro">Pro — SGD 799/mo</option>
+                <option value="enterprise">Enterprise — SGD 1,299/mo</option>
                 <option value="unsure">Not sure yet</option>
               </select>
             </div>
@@ -914,7 +987,7 @@
             </button>
           </form>
           <div id="form-success" class="hidden mt-4 p-4 rounded-xl text-center text-sm font-semibold" style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);color:#34d399;">
-            Thanks! We'll be in touch on WhatsApp within 24 hours. 🎉
+            Thanks! We'll be in touch on WhatsApp within 24 hours.
           </div>
         </div>
 
@@ -934,14 +1007,14 @@
                 <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">2</div>
                 <div>
                   <div class="font-semibold text-sm text-white mb-0.5">We build and train your Aria AI</div>
-                  <div class="text-gray-500 text-sm">We configure Aria on your business, train it on your knowledge base, and set up all integrations in 3–5 days.</div>
+                  <div class="text-gray-500 text-sm">We configure Aria on your business, train her on your knowledge base, activate your skills, and set up all integrations in 3–5 days.</div>
                 </div>
               </div>
               <div class="flex gap-4">
                 <div class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs flex-shrink-0" style="background:rgba(245,158,11,0.15);color:#f59e0b;border:1px solid rgba(245,158,11,0.3);">3</div>
                 <div>
                   <div class="font-semibold text-sm text-white mb-0.5">You scan a QR code and go live</div>
-                  <div class="text-gray-500 text-sm">One QR code scan connects your WhatsApp. Aria AI is live. Your business never sleeps again.</div>
+                  <div class="text-gray-500 text-sm">One QR code scan connects your WhatsApp. Aria AI is live with all her skills. Your business never sleeps again.</div>
                 </div>
               </div>
             </div>
@@ -954,7 +1027,7 @@
               <span class="font-bold text-base" style="color:#25D366;">Chat with Philip directly</span>
             </div>
             <p class="text-gray-400 text-sm mb-4">Prefer to talk now? Message Philip on WhatsApp and get answers instantly.</p>
-            <a href="https://wa.me/6591234567?text=Hi%20Philip%2C%20I'm%20interested%20in%20Aria%20AI%20by%20Aureus%20Automation" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition" style="background:#25D366;color:#0f0f1a;" onmouseover="this.style.background='#20c25b'" onmouseout="this.style.background='#25D366'">
+            <a href="https://wa.me/6587784828?text=Hi%20Philip%2C%20I'm%20interested%20in%20Aria%20AI%20by%20Aureus%20Automation" target="_blank" class="flex items-center justify-center gap-2 w-full py-3 rounded-xl text-sm font-bold transition" style="background:#25D366;color:#0f0f1a;" onmouseover="this.style.background='#20c25b'" onmouseout="this.style.background='#25D366'">
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
               Message on WhatsApp
             </a>
@@ -1004,7 +1077,7 @@
 
         <!-- Links -->
         <div class="flex flex-wrap items-center justify-center gap-6 text-sm text-gray-500">
-          <a href="https://smartfaqassistant.com" target="_blank" class="hover:text-gray-300 transition-colors">smartfaqassistant.com</a>
+          <a href="https://ariapersonalassistant.com" target="_blank" class="hover:text-gray-300 transition-colors">ariapersonalassistant.com</a>
           <span class="text-gray-800">|</span>
           <a href="#" class="hover:text-gray-300 transition-colors">Privacy Policy</a>
           <span class="text-gray-800">|</span>
@@ -1032,12 +1105,12 @@
       if (!name || !phone || !biz || !plan) return;
 
       // Build WhatsApp message
-      const planLabels = { essential: 'Essential ($199/mo)', pro: 'Pro ($299/mo)', enterprise: 'Enterprise ($499/mo)', unsure: 'Not sure yet' };
+      const planLabels = { essential: 'Essential (SGD 499/mo)', pro: 'Pro (SGD 799/mo)', enterprise: 'Enterprise (SGD 1,299/mo)', unsure: 'Not sure yet' };
       const bizLabels = { beauty: 'Beauty & Wellness', fnb: 'F&B', retail: 'Retail', professional: 'Professional Services', other: 'Other' };
       let waMsg = `Hi Philip, I'm interested in Aria AI by Aureus Automation.\n\nName: ${name}\nWhatsApp: ${phone}\nBusiness: ${bizLabels[biz] || biz}\nPlan: ${planLabels[plan] || plan}`;
       if (msg) waMsg += `\n\nMessage: ${msg}`;
 
-      const waUrl = `https://wa.me/6591234567?text=${encodeURIComponent(waMsg)}`;
+      const waUrl = `https://wa.me/6587784828?text=${encodeURIComponent(waMsg)}`;
       window.open(waUrl, '_blank');
 
       document.getElementById('form-success').classList.remove('hidden');
